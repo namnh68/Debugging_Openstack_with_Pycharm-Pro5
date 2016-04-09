@@ -11,9 +11,9 @@ We need two machines and topology as below:
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/hVGNksP.png" alt="" id="screenshot-image">
 
-Machine 01 (called "Pycharm-Pro5"): Installing Pycharm-Pro5
+- Machine 01 (called "Pycharm-Pro5"): Installing Pycharm-Pro5
 
-Machine 02 (called "VM") : Installing Openstack-AIO by Devstack
+- Machine 02 (called "VM") : Installing Openstack-AIO by Devstack
 
 #### Step 2: Configuration Pycharm on Pycharm-Pro5
 
@@ -29,6 +29,8 @@ Machine 02 (called "VM") : Installing Openstack-AIO by Devstack
 
 - (4): The password of VM
 
+Note: In this step, we should check to connect to VM by choose "Test SFTP connection..."
+
 Then we jump "Mappings" tab. To configure mapping between Pycharm-Pro5 and VM like image:
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/NVfR55X.png" alt="" id="screenshot-image">
@@ -42,11 +44,13 @@ Click OK.
 ##### Step 2.2: Setup project by clicking File --> Settings then choose "Project: neutron" (in this case, I am setting debug with neutron project, with other projects are similar)
 
 
-Then choose "Project Interpreter" to add a interpreter remote by choose "Add remote" and follow these steps:
+Choose "Project Interpreter" to add a interpreter remote by choose "Add remote":
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/jxd7NT8.png" alt="" id="screenshot-image">
 
-After choose "Add remote", we have as image:
+After choose "Add remote", we have image:
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/DYQhW7x.png" alt="" id="screenshot-image">
 
 Change "Deployment configuration" then click "ssh://stack@10.10.10.30:22" to connect to VM. In this time, we will response "Successfully ...." then click OK
 

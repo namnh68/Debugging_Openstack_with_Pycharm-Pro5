@@ -80,7 +80,7 @@ In this step, I will configure debug with neutron-server. With other component o
 
 ##### Step 3.2: Configuration API-worker on VM
 
-Because Pycharm-Pro5 debug just one process so we have to configure on VM other that neutron-server run only one process.
+Because Pycharm-Pro5 debug only one process so we have to configure on VM other that neutron-server run only one process.
 
 Edit configure file /etc/neutron/neutron.conf. At first line we change api_workers = -1
 
@@ -88,4 +88,4 @@ Edit configure file /etc/neutron/neutron.conf. At first line we change api_worke
 
 #### Step 4: Start debug
 
-After finished all steps. We can start debug. Have fun !!!
+After finished all steps. We can start debug by click "bug". Have fun !!!

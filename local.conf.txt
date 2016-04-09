@@ -1,0 +1,26 @@
+[[local|localrc]]
+DEST=/opt/stack
+DATA_DIR=$DEST/data
+LOGFILE=$DATA_DIR/logs/stack.log
+MYSQL_PASSWORD=hoainam123
+RABBIT_PASSWORD=hoainam123
+SERVICE_TOKEN=hoainam123
+SERVICE_PASSWORD=hoainam123
+ADMIN_PASSWORD=hoainam123
+####
+disable_service n-net
+
+# Disable Cinder service
+disable_service c-api
+disable_service c-sch
+disable_service c-vol
+#
+disable_service tempest
+enable_service neutron
+enable_service q-svc
+enable_service q-fwaas
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+

@@ -20,11 +20,14 @@ Machine 02 (call VM) : Installing Openstack-AIO by Devstack
 
 #### 2.1: Setup Deverlopment by clicking Tools --> Deployment --> Configuration then click "+" to create a "Devstack"
 
---image--
+<img class="image__pic js-image-pic" src="http://i.imgur.com/mQohhvJ.png" alt="" id="screenshot-image">
 
 (1): Type of connect to VM. We choose SFTP
+
 (2): The address of VM
+
 (3): The acount of VM
+
 (4): The password of VM
 
 Then we jump "Mappings" tab. To configure mapping between Pycharm-Pro5 and VM like picture

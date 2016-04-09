@@ -5,15 +5,19 @@ Guide configure debug Openstack with Pycharm-Pro5
 
 In this archive, I will guide configuration to debug Neutron project. And debugging other projects are similar.
 
-#### Step 01: Setup environment
+#### Step 1: Setup environment
 
 We need two machines and topology as below:
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/hVGNksP.png" alt="" id="screenshot-image">
 
-- Machine 01 (called "Pycharm-Pro5"): Installing Pycharm-Pro5
+- Machine 1 (called "Pycharm-Pro5"): Installing Pycharm-Pro5
 
-- Machine 02 (called "VM") : Installing Openstack-AIO by Devstack
+- Machine 2 (called "VM") : Installing Openstack-AIO by Devstack
+
+Note: 
+
+- You can install Openstack via Devstack by clone Devstack repo then create local.conf [here] and run command `./stack.sh`
 
 #### Step 2: Configuration Pycharm on Pycharm-Pro5
 

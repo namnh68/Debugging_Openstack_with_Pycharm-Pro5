@@ -17,7 +17,7 @@ We need two machines and topology as below:
 
 Note: 
 
-- You can install Openstack via Devstack by clone Devstack repo then create local.conf [here] and run command `./stack.sh`
+- You can install Openstack via Devstack by clone Devstack repo then create local.conf [here](https://github.com/NguyenHoaiNam/Debuging_Openstack_with_Pycharm-Pro5/blob/master/local.conf) and run command `./stack.sh`
 
 #### Step 2: Configuration Pycharm on Pycharm-Pro5
 

@@ -2,7 +2,7 @@
 
 -----
 
-In this archive, I will guide configuration to debug Neutron project by Pycharm-Pro5 . And configuration with other projects are similar to Neutron project.
+In this archive, I will guide configuration to debug Neutron project by Pycharm 5 professional . And configuration with other projects are similar to Neutron project.
 
 #### Step 1: Setup environment
 
@@ -12,7 +12,7 @@ We need two machines and topology as below:
 
 - Machine 1 (called "Pycharm-Pro5"): Installing Pycharm-Pro5.
 
-- Machine 2 (called "VM") : Installing Openstack-AIO by Devstack.
+- Machine 2 (called "VM"): Installing Openstack-AIO by Devstack.
 
 *Note:* 
 
@@ -32,7 +32,7 @@ We need two machines and topology as below:
 
 - (4): The password of VM.
 
-*Note*: In this step, we should check to connect to VM by choosing "Test SFTP connection..."
+*Note*: In this step, we should check to connect to VM by choice "Test SFTP connection..."
 
 Then we jump "Mappings" tab. To configure mapping between Pycharm-Pro5 and VM is like image:
 
@@ -47,11 +47,11 @@ Click OK.
 ##### Step 2.2: Setup project by clicking File --> Settings then choose "Project: neutron" (in this case, I am setting debug with neutron project, with other projects are similar.)
 
 
-Choosing "Project Interpreter" to add an interpreter remote by choosing "Add remote":
+Choice "Project Interpreter" to add an interpreter remote by choice "Add remote":
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/jxd7NT8.png" alt="" id="screenshot-image">
 
-After choosing "Add remote", we have image:
+After choice "Add remote", we have image:
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/DYQhW7x.png" alt="" id="screenshot-image">
 

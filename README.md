@@ -1,9 +1,8 @@
-### Debuging_Openstack_with_Pycharm-Pro5
-Guide configure debug Openstack with Pycharm-Pro5
+### Debugging_Openstack_with_Pycharm-Pro5
 
 -----
 
-In this archive, I will guide configuration to debug Neutron project. And debugging other projects are similar.
+In this archive, I will guide configuration to debug Neutron project by Pycharm-Pro5 . And configuration with other projects are similar to Neutron project.
 
 #### Step 1: Setup environment
 
@@ -15,9 +14,9 @@ We need two machines and topology as below:
 
 - Machine 2 (called "VM") : Installing Openstack-AIO by Devstack.
 
-Note: 
+*Note:* 
 
-- You can install Openstack via Devstack by clone Devstack repo then create local.conf [here](https://github.com/NguyenHoaiNam/Debuging_Openstack_with_Pycharm-Pro5/blob/master/local.conf) and run command `./stack.sh`
+- We will use Devstack to install Openstack-AIO. This is [local.conf](https://github.com/NguyenHoaiNam/Debuging_Openstack_with_Pycharm-Pro5/blob/master/local.conf) file.
 
 #### Step 2: Configuration Pycharm on Pycharm-Pro5
 
@@ -25,7 +24,7 @@ Note:
 
 <img class="image__pic js-image-pic" src="http://image.prntscr.com/image/27222f597a0142d4820597d1a6ef4ed5.png" alt="" id="screenshot-image">
 
-- (1): Type of connect to VM. We choose SFTP.
+- (1): Type of connect to VM. We will choose SFTP.
 
 - (2): The address of VM.
 
@@ -33,9 +32,9 @@ Note:
 
 - (4): The password of VM.
 
-Note: In this step, we should check to connect to VM by choose "Test SFTP connection..."
+*Note*: In this step, we should check to connect to VM by choosing "Test SFTP connection..."
 
-Then we jump "Mappings" tab. To configure mapping between Pycharm-Pro5 and VM like image:
+Then we jump "Mappings" tab. To configure mapping between Pycharm-Pro5 and VM is like image:
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/NVfR55X.png" alt="" id="screenshot-image">
 
@@ -45,22 +44,22 @@ Then we jump "Mappings" tab. To configure mapping between Pycharm-Pro5 and VM li
 
 Click OK.
 
-##### Step 2.2: Setup project by clicking File --> Settings then choose "Project: neutron" (in this case, I am setting debug with neutron project, with other projects are similar)
+##### Step 2.2: Setup project by clicking File --> Settings then choose "Project: neutron" (in this case, I am setting debug with neutron project, with other projects are similar.)
 
 
-Choose "Project Interpreter" to add an interpreter remote by choose "Add remote":
+Choosing "Project Interpreter" to add an interpreter remote by choosing "Add remote":
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/jxd7NT8.png" alt="" id="screenshot-image">
 
-After choose "Add remote", we have image:
+After choosing "Add remote", we have image:
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/DYQhW7x.png" alt="" id="screenshot-image">
 
-Change "Deployment configuration" then click "ssh://stack@10.10.10.30:22" to connect to VM. In this time, we will response "Successfully ...." then click OK
+Change "Deployment configuration" then click "ssh://stack@10.10.10.30:22" to connect to VM. In this time, we will receive message "Successfully ...."
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/efOR8ol.png" alt="" id="screenshot-image">
 
-We need to wait a time to Pycharm download packet from VM.
+We need to wait a time so that Pycharm download packet from VM.
 
 
 ##### Step 2.3: Configuration Python Debugger. In "Settings", we choose "Build, Execution, Deployment" --> "Python Debugger" then select "Gevent compatible"
@@ -80,7 +79,7 @@ In this step, I will configure debug with neutron-server. With other component o
 
 ##### Step 3.2: Configuration API-worker on VM
 
-Because Pycharm-Pro5 debug only one process so we have to configure on VM other that neutron-server run only one process.
+Because Pycharm-Pro5 debug only one process so we have to configure on VM so that neutron-server run only one process.
 
 Edit configure file /etc/neutron/neutron.conf. At first line we change api_workers = -1
 

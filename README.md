@@ -84,8 +84,22 @@ Because Pycharm-Pro5 debug only one process so we have to configure on VM other 
 
 Edit configure file /etc/neutron/neutron.conf. At first line we change api_workers = -1
 
-##### Step 3.3: After change file configure, turn off process neutron-server on VM. (Hide: you can use rejoin-stack to do that).
+(note that in nova api configuration, the config for only one process api worker is osapi_worker = 1. The nova API daemon does not accept negative value)
 
-#### Step 4: Start debug
+##### Step 3.3: After changing configuration file, turn off neutron-server process on VM. (Hint: you can use rejoin-stack to do that).
 
-After finished all steps. We can start debug by click "bug". Have fun !!!
+#### Step 4: Start debugging
+
+After finishing all steps. We can start debug by click "debug" button. Have fun !!!
+
+**Optional**: If you want to locally debugging your openstack neutron, please apply monkey patch for eventlet for collecting debug information from openstack process. In neutron, edit file __init__.py in neutron/common/eventlet_utils.py and modify line 32 from: 
+
+```python
+eventlet.monkey_patch()
+```
+to:
+```python
+eventlet.monkey_patch(os=False, thread=False)
+```
+
+Happy debugging !
